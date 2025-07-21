@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--general setting-->
+    <meta charset="UTF-8" />
+    <meta name="description" content="Ukyo Towbish Tazawa's current research." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>Ukyo Towbish Tazawa</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="common.css" />
+
+    <!--style specific to this html file-->
+    <style>
+      .fig1 {
+        width: 80%;
+        margin:auto;
+      }
+      .fig1 img {
+        width: 100%;
+      }
+      .fig1 figcaption {
+        text-align: left;
+      }
+      @media screen and (max-width: 1279px) {
+        .fig1 {
+          width: 95%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1><a href="index.html">Ukyo Towbish Tazawa (Toby)</a></h1>
+      <nav id="header_nav">
+        <div class="pc">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="hobby.html">Hobby</a></li>
+            <li><a href="ja/research.html">にほんご</a></li>
+          </ul>
+        </div>
+        <div class="sp">
+          <input type="checkbox" id="hamburger-btn">
+          <label for="hamburger-btn" class="hamburger-appearance"><span></span><span></span><span></span></label>
+          <div class="hamburger-content">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="research.html">Research</a></li>
+              <li><a href="cv.html">CV</a></li>
+              <li><a href="hobby.html">Hobby</a></li>
+              <li><a href="ja/research.html">にほんご</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <nav id="sidebar" class="pc">
+        <div id="sidebar_padding">
+          <div id="sidebar_title">Research</div>
+          <div id="sidebar_content">
+            <ul>
+              <li><a href="#abstract">Mathematical Modeling of Intelligence</a></li>
+              <li><a href="#intelligence">What Is Intelligence?</a></li>
+              <li><a href="#FEP_plausibility">Is the Free Energy Principle Plausible in the Brain?</a></li>
+              <li><a href="#BSyMP">Synaptic Pruning Is Equivalent to Online Bayesian Model Selection</a></li>
+              <li><a href="#interests_evolution">Evolution of My Research Interests</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div id="all_sections">
+        <div class="content_container">
+          <section id="abstract">
+            <h2>Mathematical Modeling of Intelligence</h2>
+            <p class="paragraph">
+              Throughout history, humanity has imagined and created a vast range of things.
+              From science and technology to the arts, intelligence is an essential component of human activities.
+              It’s no exaggeration to say that intelligence is what defines us as humans.
+            </p>
+            <p class="paragraph">
+              Here comes a question: how does the brain exhibit intelligence?
+              The goal of my research is to mathematically elucidate the mechanisms by which the brain demonstrates intelligence.
+              To this end, I am working on building brain-inspired models capable of intelligent behavior.
+              These models are based on the Free Energy Principle (FEP), a theory that aims to explain a wide range of brain functions—spanning from perception to action—within a unified framework.
+              By grounding the model construction in the FEP, I aim to create a general-purpose model that can adapt to various situations.
+            </p>
+            <p class="paragraph">
+              However, simply saying that “I'm working on mathematical modeling of intelligence” lacks concreteness, since the term "intelligence" is broad and ambiguous.
+              In my research, I focus on a specific capability I consider fundamental to intelligence: the ability to abstract from individual experiences and adapt to novel situations.
+              Specifically, I aim to model the following three abilities:<br/>
+              1. Acquisition of abstract representations<br/>
+              2. Transfer learning and generalization using these abstract representations<br/>
+              3. Adaptive selection of the appropriate level of abstraction depending on the situation<br/>
+              Figure 1 illustrates examples of these abilities.
+              Please look forward to upcoming publications where I will share more concrete ideas and methodologies. Wish me luck!
+            </p>
+            <figure class="fig1">
+              <img src="img/ResearchFig1_en.png">
+              <figcaption>
+                <h3>Figure 1: Acquiring Abstract Representations and Using Them for Generalization and Adaptive Behavior</h3>
+                <p>
+                  (a) Abstracting individual concepts acquired through learning (left) to form higher-level abstract concepts (right).<br/>
+                  (b) Using abstract concepts to infer unknown properties when encountering a new concept (e.g., a sheep) for the first time.<br/>
+                  (c) Switching the level of abstraction used in response to questions to select the most appropriate concept (red frame) for response.
+                </p>
+              </figcaption>
+            </figure>
+          </section>
+        </div>
+
+        <div class="content_container">
+          <section id="intelligence">
+            <h2>What Is Intelligence?</h2>
+            <p class="paragraph">
+              What exactly is intelligence or intelligent behavior?
+              Here are some answers I've received when asking people around me the same question:
+            </p>
+            <ul>
+              <li>The ability to act flexibly and adapt to different situations</li>
+              <li>Generalization ability (e.g., people who can apply what they’ve learned to different things are considered intelligent)</li>
+              <li>Creativity (e.g., people who come up with ideas I could never imagine are considered intelligent)</li>
+              <li>High computational ability (e.g., people who can solve difficult problems or solve them quickly are considered intelligent)</li>
+              <li>Rational judgment and behavior (e.g., people who aren’t swayed by emotions are considered intelligent)</li>
+              <li>Being knowledgeable (Interestingly, some people said that being knowledgeable is unrelated to intelligence)</li>
+              <br/>
+            </ul>
+            <p class="paragraph">
+              As an example, I earlier proposed an answer: the ability to acquire abstract representations and use them to generalize. 
+              However, I believe there are other important and fascinating components of intelligence as well. 
+              One example is meta-learning, which I am currently exploring and working on idea generation, in parallel with my research on abstraction.<br/>
+              Having considered the above, what does intelligence mean to you? 
+              If you have a different perspective from those listed above, I would love to hear your thoughts via this
+              <a href="https://forms.gle/8yFZCAzvw38DmmXX8" target="_blank" rel="noopener noreferrer">Google Form</a>,
+              or please feel free to email me directly. 
+              All opinions are welcome. If I find your perspective particularly thought-provoking, it could help open up a new direction in my research.
+            </p>
+          </section>
+        </div>
+
+        <div class="content_container">
+          <section id="FEP_plausibility">
+            <h2>Is the Free Energy Principle Plausible in the Brain?</h2>
+            <p>
+              To be written...
+            </p>
+          </section>
+        </div>
+
+        <div class="content_container">
+          <section id="BSyMP">
+            <h2>Synaptic Pruning Is Equivalent to Online Bayesian Model Selection</h2>
+            <p>
+              I plan to introduce theoretical work I conducted in the Isomura Lab (<a href="https://doi.org/10.1101/2024.05.15.593712" target="_blank" rel="noopener noreferrer">here</a>).
+              Once the paper is officially published, I intend to write an article summarizing it.
+            </p>
+          </section>
+        </div>
+
+        <div class="content_container">
+          <section id="interests_evolution">
+            <h2>Evolution of My Research Interests</h2>
+            <p>
+              I might someday write something about how my interests have evolved, starting from my early days doing experimental research—if I'm inclined to do so.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+
+    <footer>© 2025 Ukyo Towbish Tazawa</footer>
+  </body>
+</html>

@@ -1,0 +1,311 @@
+@charset "UTF-8";
+/* ---------------------------- general ---------------------------- */
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+/* --------------------------- remove components for sp ---------------------------- */
+.sp {
+	display: none;
+}
+
+/* ---------------------------- body ---------------------------- */
+body {
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	line-height: 1.6;
+	background-color: #EEEEEE;
+	display: flex;
+	flex-direction: column;
+}
+
+/* ---------------------------- header ---------------------------- */
+header {
+	height: 60px;
+	padding: 20px;
+	background-color: #AA2222;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+h1 {
+	padding: 0 0 0 30px;
+	margin: auto 0;
+	font-size: 40px;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+#header_nav ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+}
+
+#header_nav li {
+	padding: 0 20px;
+	font-size: 20px;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+/* ---------------------------- main ---------------------------- */
+main {
+	padding: 30px 30px;
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+}
+
+/* ---------------------------- sidebar ---------------------------- */
+#manga_cover_inside {
+	width: 25vw;
+	flex-shrink: 0;
+	padding: 20px 0px;
+}
+
+#author_comment {
+	padding: 10px;
+	margin: 0 0 15px 0;
+	background-color: #FFDDDD;
+	border-radius: 5px 5px 0 0;
+	font-size: 20px;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: bold;
+	color: #000000;
+}
+
+#author_comment h2 {
+	padding: 0;
+	margin: 0 auto;
+	width: 80%;
+	font-size: 32px;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 3px solid #666666;
+}
+
+#author_comment p {
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+#author_comment a {
+	color: #0000EE;
+	text-decoration: underline;
+}
+
+#author_comment a:visited {
+	color: #BB00BB;
+	text-decoration: underline;
+}
+
+/* ---------------------------- section ---------------------------- */
+#all_sections {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.content_container {
+	padding: 20px 20px;
+	flex-grow: 1;
+}
+
+section {
+	padding: 10px 10px;
+	background-color: #FFFFFF;
+	border: 5px #AA2222 solid;
+	border-radius: 15px 15px 15px 15px;
+}
+
+section h2 {
+	padding: 0;
+	margin: 0;
+	font-size: 32px;
+	font-family: 'Helvetica', sans-serif;
+	font-weight: bold;
+	border-bottom: 3px solid #666666;
+}
+
+section p {
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+section a {
+	color: #0000EE;
+	text-decoration: underline;
+}
+
+section a:visited {
+	color: #BB00BB;
+	text-decoration: underline;
+}
+
+/* ---------------------------- footer ---------------------------- */
+footer {
+	padding: 20px;
+	font-size: 20px;
+	font-family: 'Helvetica', sans-serif;
+	height: 40px;
+	text-align: center;
+	background-color: #AA2222;
+	color: #FFFFFF;
+}
+
+/* ---------------------------- media queries ---------------------------- */
+/* ---------------------------- tablets ---------------------------- */
+@media screen and (max-width: 1279px) {
+	/* ---------------------------- header ---------------------------- */
+	header {
+		height: 40px;
+	}
+
+	h1 {
+		padding: 0 0 0 20px;
+		font-size: 30px;
+	}
+
+	#header_nav li {
+		padding: 0 20px 0 5px;
+		font-size: clamp(0.875rem, -0.054rem + 1.63vw, 1.25rem) /*14-20px*/;
+	}
+
+	/* ---------------------------- main ---------------------------- */
+	main {
+		padding:  20px;
+	}
+
+	/* ---------------------------- sidebar ---------------------------- */
+	#author_comment h2 {
+		font-size: 30px;
+	}
+
+	#author_comment p {
+		font-size: 18px;
+	}
+
+	/* ---------------------------- section ---------------------------- */
+	section h2 {
+		font-size: 30px;
+	}
+
+	section p {
+		font-size: 18px;
+	}
+
+	/* ---------------------------- footer ---------------------------- */
+	footer {
+		font-size: 18px;
+		height: 18px;
+	}
+}
+
+/* ---------------------------- smartphone ---------------------------- */
+@media screen and (max-width: 911px) {
+	/* ---------------------------- remove components for pc and display those for sp ---------------------------- */
+	.pc {
+		display: none;
+	}
+	.sp {
+		display: block;
+	}
+
+	/* ---------------------------- header ---------------------------- */
+	header {
+		height: 30px;
+	}
+
+	h1 {
+		padding: 0 10px 10px 20px;
+		font-size: 20px;
+	}
+
+	.hamburger-appearance {
+		display: flex;
+		flex-direction: column;
+		gap: .7em;
+		width: fit-content;
+		margin: 0 0 0 auto;
+	}
+
+	.hamburger-appearance span {
+		display: block;
+		width: 50px;
+		height: 5px;
+		background: #000000;
+		border-radius: 100vh;
+	}
+
+	#hamburger-btn {
+		display: none;
+	}
+
+	.hamburger-content {
+		position: fixed;
+		right: -100%;
+	}
+
+	#hamburger-btn:checked~.hamburger-content {
+		right: 0;
+	}
+	
+	#header_nav .hamburger-content ul {
+		padding: 10px;
+		margin: 10px 0;
+		gap: 10px;
+		background-color: #AA2222;
+		flex-direction: column;
+	}
+
+	#header_nav .hamburger-content li {
+		padding: 0 10px;
+		margin: 10px 0;
+		font-size: 20px;
+	}
+
+	/* ---------------------------- main ---------------------------- */
+	main {
+		flex-direction: column-reverse;
+	}
+
+	/* ---------------------------- sidebar ---------------------------- */
+	#manga_cover_inside {
+		width: 100%;
+	}
+
+	#author_comment p {
+		font-size: 18px;
+	}
+
+	/* ---------------------------- section ---------------------------- */
+	.content_container {
+		padding: 10px;
+	}
+
+	section h2 {
+		font-size: 20px;
+	}
+
+	section p {
+		font-size: 16px;
+	}
+
+	/* ---------------------------- footer ---------------------------- */
+	footer {
+		font-size: 12px;
+		height:12px;
+	}
+}

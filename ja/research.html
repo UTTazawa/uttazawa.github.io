@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!--general setting-->
+    <meta charset="UTF-8" />
+    <meta name="description" content="田澤右京が行っている研究を紹介するページです。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>田澤右京のホームページ</title>
+
+    <!--css-->
+    <link rel="stylesheet" href="common.css" />
+
+    <!--style specific to this html file-->
+    <style>
+      .fig1 {
+        width: 80%;
+        margin:auto;
+      }
+      .fig1 img {
+        width: 100%;
+      }
+      .fig1 figcaption {
+        text-align: left;
+      }
+      @media screen and (max-width: 1279px) {
+        .fig1 {
+          width: 95%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1><a href="index.html">田澤右京のホームページ</a></h1>
+      <nav id="header_nav">
+        <div class="pc">
+          <ul>
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="research.html">研究</a></li>
+            <li><a href="cv.html">経歴・業績</a></li>
+            <li><a href="hobby.html">趣味</a></li>
+            <li><a href="../research.html">English</a></li>
+          </ul>
+        </div>
+        <div class="sp">
+          <input type="checkbox" id="hamburger-btn">
+          <label for="hamburger-btn" class="hamburger-appearance"><span></span><span></span><span></span></label>
+          <div class="hamburger-content">
+            <ul>
+              <li><a href="index.html">トップ</a></li>
+              <li><a href="research.html">研究</a></li>
+              <li><a href="cv.html">経歴・業績</a></li>
+              <li><a href="hobby.html">趣味</a></li>
+              <li><a href="../research.html">English</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <nav id="sidebar" class="pc">
+        <div id="sidebar_padding">
+          <div id="sidebar_title">研究</div>
+          <div id="sidebar_content">
+            <ul>
+              <li><a href="#abstract">知性を数理モデル化する</a></li>
+              <li><a href="#intelligence">そもそも知性って何？</a></li>
+              <li><a href="#FEP_plausibility">自由エネルギー原理は脳内実装可能か？</a></li>
+              <li><a href="#BSyMP">シナプス刈り込みはベイズ最適な生成モデル選択と等価</a></li>
+              <li><a href="#interests_evolution">興味の変遷</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div id="all_sections">
+        <div class="content_container">
+          <section id="abstract">
+            <h2>知性を数理モデル化する</h2>
+            <p class="paragraph">
+              人類はこれまでに様々なものを想像し、発展を遂げてきました。
+              自然科学や技術開発から芸術活動に至るまで、人類の様々な営みには知性が必要不可欠です。
+              このことから、人類を人類たらしめているのは知性だと言っても過言ではないでしょう。
+            </p>
+            <p class="paragraph">
+              では、脳はどのように知性を示すのでしょうか？
+              私の研究の目標は、脳が知性を示す仕組みを数理的に明らかにすることです。
+              そのために、知的に振る舞うことができる脳型知能モデルの構築に取り組んでいます。
+              モデルの構築にあたっては、認識から行動に至るまでの幅広い脳機能を統一的に説明する「自由エネルギー原理」という脳の理論を基礎とすることで、汎用的なモデルの構築を目指します。
+              自由エネルギー原理の詳細については、<a href="https://youtu.be/bCvVoHIlwZE?si=iC2jx9KA37FkwSwk" target="_blank" rel="noopener noreferrer">私のチュートリアル動画</a>を参照ください。
+            </p>
+            <p class="paragraph">
+              さて、知性を数理モデル化すると言うだけでは、知性という言葉の意味するところが広範かつ曖昧なため、具体性に欠けます。
+              私の研究では、私が知性の重要な構成要素だと考えている「個々の具体的な経験を抽象化し、未知の状況に適応する能力」をモデル化の対象としており、特に以下の3つの能力をモデル化することを目指しています。<br/>
+              1. 抽象的な表現の獲得<br/>
+              2. 抽象的な表現を活用した転移学習, 汎化<br/>
+              3. 抽象的な表現を利用する際に、状況に応じて適切な抽象度の表現を選択して利用する能力<br/>
+              図1はこれらの能力の使用例です。
+              モデル構築のための具体的なアイデア, 手法については、論文投稿等の成果物をお待ちください...。
+            </p>
+            <figure class="fig1">
+              <img src="../img/ResearchFig1_ja.png">
+              <figcaption>
+                <h3>図1：抽象的な表現の獲得と、それを利用した汎化および適応的な行動</h3>
+                <p>
+                  (a)学習を通して獲得した個々の概念（左）を抽象化することで、抽象的概念（右）を獲得する様子。
+                  (b)獲得した抽象的概念を用いて、初めて出会う概念（羊）の認識に際して未知の特徴を推論する様子。
+                  (c)質問に応じて行動（応答）に利用する概念（赤枠）の抽象度を適切に切り替える様子。 
+                </p>
+              </figcaption>
+            </figure>
+          </section>
+        </div>
+
+        <div class="content_container">
+          <section id="intelligence">
+            <h2>そもそも知性って何？</h2>
+            <p class="paragraph">
+              そもそも知性, 知的な振る舞いとは何なのでしょうか？
+              私がこれまで周りの方々に同様の質問をした際の回答を以下に示します。
+            </p>
+            <ul>
+              <li>状況に応じて柔軟に行動できること, 環境に適応できること</li>
+              <li>汎化能力（e.g., 学んだことを応用できる人が賢いと思う）</li>
+              <li>発想力の高さ（e.g., 自分が到底思いつけないようなアイディアを出せる人が賢いと思う）</li>
+              <li>計算・演算能力の高さ（e.g., 難しい問題や課題を解ける, あるいはそれらを早く解ける人が賢いと思う）</li>
+              <li>判断, 行動の合理性（e.g., 感情に左右されない人が賢いと思う）</li>
+              <li>博識であること（...興味深いことに、博識であることは知性と無関係だと言う人もいました）</li>
+              <br/>
+            </ul>
+            <p class="paragraph">
+              私は先ほど答えの一例として、抽象的な表現の獲得とそれを用いた高い汎化性能という案を示しました。
+              しかし、知性には他にも重要で興味深い構成要素が存在すると考えています。
+              メタ学習がその一例で、現在私は抽象化の研究と並行してメタ学習に関する勉強とアイデア出しを進めているところです。
+              <br/>
+              さて、ここまでの話を踏まえて、あなたにとって知性とは何でしょうか？
+              もしこれまでに示されたものと異なる視点をお持ちの方がいれば、是非<a href="https://forms.gle/8yFZCAzvw38DmmXX8" target="_blank" rel="noopener noreferrer">Google Form</a>からご意見をお聞かせください。
+              あるいは直接メールを送っていただいても良いです。
+              いかなる意見も歓迎します。
+              私が興味を惹かれる視点, 考え方があれば研究の良いきっかけになって非常に助かります。
+            </p>
+          </section>
+        </div>
+        
+        <div class="content_container">
+          <section id="FEP_plausibility">
+            <h2>自由エネルギー原理は脳内実装可能か？</h2>
+            <p>
+              執筆予定...
+            </p>
+          </section>
+        </div>
+
+        <div class="content_container">
+          <section id="BSyMP">
+            <h2>シナプス刈り込みはベイズ最適な生成モデル選択と等価</h2>
+            <p>
+              磯村ユニットでこれまでに行った理論研究（<a href="https://doi.org/10.1101/2024.05.15.593712" target="_blank" rel="noopener noreferrer">こちら</a>）を紹介する予定です。
+              無事に出版されたら紹介記事の執筆に取り掛かるつもりです。
+            </p>
+          </section>
+        </div>
+
+        <div class="content_container">
+          <section id="interests_evolution">
+            <h2>興味の変遷</h2>
+            <p>
+              もし気が向いたら実験研究をしていた頃からの興味の変遷について何か書くかもしれません。
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer>© 2025 田澤右京のホームページ</footer>
+  </body>
+</html>
