@@ -66,11 +66,11 @@
           <div id="sidebar_title">Research</div>
           <div id="sidebar_content">
             <ul>
-              <li><a href="#abstract">Mathematical Modeling of Intelligence</a></li>
-              <li><a href="#intelligence">What Is Intelligence?</a></li>
-              <li><a href="#FEP_plausibility">Is the Free Energy Principle Plausible in the Brain?</a></li>
-              <li><a href="#BSyMP">Synaptic Pruning Is Equivalent to Online Bayesian Model Selection</a></li>
-              <li><a href="#upcoming">Upcoming Articles</a></li>
+              <li><a href="#Abstraction">Mathematical Modeling of Intelligence</a></li>
+              <li><a href="#Intelligence">What Is Intelligence?</a></li>
+              <li><a href="#FEP_plausibility">Does the Free-energy Principle Have a Neural Implementation?</a></li>
+              <li><a href="#Renormalization">A Scale-Invariant Model of the Brain</a></li>
+              <li><a href="#BSyMP">Synaptic Pruning Is Equivalent to Bayes-Optimal Generative Model Selection</a></li>
             </ul>
           </div>
         </div>
@@ -78,7 +78,7 @@
 
       <div id="all_sections">
         <div class="content_container">
-          <section id="abstract">
+          <section id="Abstraction">
             <h2>Mathematical Modeling of Intelligence</h2>
             <p class="paragraph">
               Throughout history, humanity has imagined and created a vast range of things. 
@@ -117,7 +117,7 @@
         </div>
 
         <div class="content_container">
-          <section id="intelligence">
+          <section id="Intelligence">
             <h2>What Is Intelligence?</h2>
             <p class="paragraph">
               What exactly is intelligence or intelligent behavior? 
@@ -130,7 +130,6 @@
               <li>High computational ability (e.g., people who can solve difficult problems or solve them quickly are considered intelligent)</li>
               <li>Rational judgment and behavior (e.g., people who aren’t swayed by emotions are considered intelligent)</li>
               <li>Being knowledgeable (Interestingly, some people said that being knowledgeable is unrelated to intelligence)</li>
-              <br/>
             </ul>
             <p class="paragraph">
               As an example, I earlier proposed an answer: the ability to acquire abstract representations and use them to generalize. 
@@ -196,9 +195,44 @@
 
         <div class="content_container">
           <section id="BSyMP">
-            <h2>Synaptic Pruning Is Equivalent to Online Bayesian Model Selection</h2>
-            <p>
-              I plan to introduce theoretical work I conducted in the Isomura Lab (<a href="https://doi.org/10.1016/j.neunet.2025.108311" target="_blank" rel="noopener noreferrer">here</a>).
+            <h2>Synaptic Pruning Is Equivalent to Bayes-Optimal Generative Model Selection</h2>
+            <p class="paragraph">
+              In the <a href="https://doi.org/10.1016/j.neunet.2025.108311" target="_blank" rel="noopener noreferrer">published paper</a>, we introduced our study from the perspective of general neuroscience.
+              Here, I take a different perspective and explain the significance of our findings within the frameworks of the free-energy principle and Bayesian inference.
+            </p>
+            <p class="paragraph">
+              Whether Bayesian inference works successfully depends heavily on whether the brain's "generative model" appropriately reflects the external world.
+              A generative model is a set of assumptions held by an agent, such as the brain, about the process through which sensory information is generated in the external world.
+              The brain is thought to use this generative model to infer the causes of observed sensory information.
+              In many studies, the structure of the generative model is specified in advance by the designer of the agent, and the focus is placed on inferring external states and optimizing model parameters under the given generative model.
+              However, the real brain is not initially provided with a generative model that correctly reflects the causal structure of the external world and must therefore learn which elements are causally related.
+              In other words, through experience, the brain must autonomously acquire not only the model parameters but also the structure of the generative model itself.
+            </p>
+            <p class="paragraph">
+              The process of selecting the most appropriate generative model is called "model selection."
+              Karl Friston, who proposed the free-energy principle, and his colleagues have also proposed a framework called Bayesian model reduction (BMR), which removes unnecessary model parameters and thereby selects a simpler and more appropriate generative model.
+              However, although BMR mathematically describes how a generative model should be selected, discussions of how this computation is implemented in the actual brain remain phenomenological.
+              Therefore, the situation regarding the neural implementation of model selection was similar to that described in <a href="#FEP_plausibility">Does the Free-energy Principle Have a Neural Implementation?</a>.
+              No neural implementation hypothesis had been proposed that, like canonical neural networks for the free-energy principle, establishes a clear mathematical correspondence between concrete changes in neural circuits and Bayesian model selection and is quantitatively testable using experimental data.
+            </p>
+            <p class="paragraph">
+              To address this problem, we introduced the elimination of synaptic connections, or "synaptic pruning," into canonical neural networks and theoretically derived synaptic-pruning dynamics that are mathematically equivalent to Bayesian model selection.
+              This means that synaptic pruning enables a neural circuit to autonomously learn the structure of its generative model&mdash;that is, the structure of causal relationships in the external world&mdash;based on its experience.
+              In the context above, our study proposes a concrete neural implementation of model selection.
+              For further details, please refer to the
+              <a href="https://doi.org/10.1016/j.neunet.2025.108311" target="_blank" rel="noopener noreferrer">paper</a>,
+              <a href="https://www.riken.jp/press/2025/20251126_2/index.html" target="_blank" rel="noopener noreferrer">press release (written in Japanese, sorry)</a>, and
+              <a href="https://youtu.be/-slAvCA5gtg" target="_blank" rel="noopener noreferrer">explanatory video</a>.
+              Below, assuming that you have already read the paper, I provide two additional points from engineering and biological perspectives.
+            </p>
+            <ul>
+                <li>In this study, we address the problem of model selection by incorporating model selection into the generative model itself. In other words, we eliminate the distinction between "learning model parameters" and "selecting model structure" and simplify the problem by subsuming the latter into the former. We believe that this design principle can be generalized beyond the specific problem considered in this study.</li>
+                <li>Synaptic pruning is often described as a process that eliminates "unnecessary connections." This raises the question: what makes a connection unnecessary? Our study answers that unnecessary connections are those that do not contribute to inference from a Bayesian perspective.</li>
+            </ul>
+            <p class="paragraph">
+              Finally, as an aside, we christened this synaptic-pruning-based model-selection method Bayesian synaptic model pruning (BSyMP).
+              As mathematically demonstrated in the paper, BSyMP guarantees that the structure of the neural circuit, or the corresponding generative model, becomes sufficiently simple.
+              This property is the origin of the name BSyMP: The structure will be simple; it will B SyMPle.
             </p>
           </section>
         </div>
